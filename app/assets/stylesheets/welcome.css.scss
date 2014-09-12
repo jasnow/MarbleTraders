@@ -2,19 +2,13 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 body {
-    background-image: url("http://thumbs.dreamstime.com/z/colorful-marbles-1009798.jpg");
+    background-image: url("/assets/marble_logo.jpg");
     background-size: 50% auto;
    background-repeat: no-repeat;
    background-attachment: fixed;
     
-    background-position: 300px 300px; 
+    background-position: 300px 400px; 
 }
 
-// Classes
-.pull-left {
-  float: left !important;
-}
-.pull-right {
-  float: right !important;
-}
+
 
