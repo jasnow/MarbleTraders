@@ -1,0 +1,31 @@
+<h1>Marble Trading Floor</h1>
+
+<table class='table'>
+  <thead>
+    <tr>
+      <th>Trader</th>
+      <th>Marble name</th>
+      <th>Description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @marbles.each do |marble| %>
+      <tr>
+        <td><%= marble.user_id %></td>
+          <div class="field">
+        <td><%= marble.marble_name %></td>
+        <td><%= marble.marble_text %></td>
+        <td><%= link_to 'Show', marble %></td>
+        <td><%= link_to 'Edit', edit_marble_path(marble) %></td>
+        <td><%= link_to 'Destroy', marble, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<strong><%= link_to 'Add Your Marble Here', new_marble_path %><strong>
