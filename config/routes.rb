@@ -2,11 +2,11 @@ Rails.application.routes.draw do
   
   root 'welcome#index'
 
+  get 'welcome/index'
+
   get 'welcome/marble_grade'
 
   get 'welcome/marble_history'
-
-  get 'welcome/index'
 
   get 'users/sign_out'
 
