@@ -2,9 +2,6 @@
 <br>
 <table class="table">
   <thead>
-
-  ...
-
     <tr>
       <th>User</th>
       <th> Marble</th>
@@ -19,8 +16,8 @@
         <td><%= comment.user.user_name %></td>
         <td><%= comment.marble.marble_name %></td>
         <td><%= comment.comment_text %></td>
-        <td><strong><%= link_to '| Show', comment %><strong> |</td> 
-        <td><strong><%= link_to ' Edit', edit_comment_path(comment) %><strong> |</td> 
+        <td><strong><%= link_to 'Show', comment %><strong></td> 
+        <td><strong><%= link_to 'Edit', edit_comment_path(comment) %><strong></td> 
         <td><strong><%= link_to ' Destroy', comment, method: :delete, data: { confirm: 'Are you sure?' } %><strong></td>
       </tr>
     <% end %>
