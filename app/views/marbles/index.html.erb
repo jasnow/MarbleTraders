@@ -13,7 +13,7 @@
   <tbody>
     <% @marbles.each do |marble| %>
       <tr>
-        <td><%= marble.user_id %></td>
+        <td><%= marble.user.user_name %></td>
           <div class="field">
         <td><%= marble.marble_name %></td>
         <td><%= marble.marble_text %></td>
