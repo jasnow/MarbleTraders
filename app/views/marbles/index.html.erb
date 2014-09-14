@@ -4,6 +4,7 @@
   <thead>
     <tr>
       <th>Trader</th>
+      <th></th>
       <th>Marble name</th>
       <th>Description</th>
       <th colspan="3"></th>
@@ -15,7 +16,7 @@
       <tr>
         <div class="field">
           <td><%= marble.user.user_name %></td>
-          <td></td>
+          <td><%= image_tag marble.avatar.url(:thumb) %></td>
           <td><%= marble.marble_name %></td>
           <td><%= marble.marble_text %></td>
           <td><%= link_to 'Show', marble %></td>
