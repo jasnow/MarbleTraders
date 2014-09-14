@@ -13,14 +13,14 @@
   <tbody>
     <% @marbles.each do |marble| %>
       <tr>
-        <td><%= marble.user.user_name %></td>
-          <div class="field">
-        <td><%= marble.marble_name %></td>
-        <td><%= marble.marble_text %></td>
-        <td><%= link_to 'Show', marble %></td>
-        <td><%= link_to 'Edit', edit_marble_path(marble) %></td>
-        <td><%= link_to 'Destroy', marble, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        
+        <div class="field">
+          <td><%= marble.user.user_name %></td>
+          <td></td>
+          <td><%= marble.marble_name %></td>
+          <td><%= marble.marble_text %></td>
+          <td><%= link_to 'Show', marble %></td>
+          <td><%= link_to 'Edit', edit_marble_path(marble) %></td>
+          <td><%= link_to 'Destroy', marble, method: :delete, data: { confirm: 'Are you sure?' } %></td>      
       </tr>
     <% end %>
   </tbody>
