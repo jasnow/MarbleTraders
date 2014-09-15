@@ -9,16 +9,13 @@
     <% @marble.each do |marble| %>
       <tr>
         <div class="field"> 
-          <td><%= image_tag marble.avatar.url(:thumb) %></td>
-          <td><%= link_to marble.user.user_name, marbleuser_path %></td>
-
-          <td><%= marble.marble_text %></td>
-
-    
+          <td rowspan="2"><%= image_tag marble.avatar.url(:thumb) %></td>
+          <td><u><%= link_to marble.user.user_name, marbleuser_path %></u></td>
+          <td><%= marble.marble_text %></td>    
       </tr>
       <tr>
           <td><%= marble.marble_name %></td>
-          <td><%= link_to 'Comments', marblecomments_path%></td>
+          <td><u><%= link_to 'Comments', marblecomments_path%></u></td>
       </tr>
     <% end %>
   </tbody>
