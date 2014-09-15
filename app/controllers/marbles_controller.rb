@@ -4,7 +4,7 @@ class MarblesController < ApplicationController
   # GET /marbles
   # GET /marbles.json
   def index
-    @marbles = Marble.all
+    @marble = Marble.all
   end
 
   # GET /marbles/1
@@ -62,10 +62,14 @@ class MarblesController < ApplicationController
     end
   end
 
+  def marbles_by_user
+    @marble = Marble.order(:user_id)    
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_marble
-      @marble = Marble.find(params[:id])
+      @marble = Marble.find(params[:id])    
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

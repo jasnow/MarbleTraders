@@ -1,4 +1,5 @@
 class Marble < ActiveRecord::Base
+
 	belongs_to :user
   has_many :comments
 
@@ -27,6 +28,7 @@ end
  #friend.avatar.url => http://marbletrader.s3.amazonaws.com/
 
     
+  
   
 
   

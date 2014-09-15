@@ -61,6 +61,11 @@ class CommentsController < ApplicationController
     end
   end
 
+  # added for comments by user view; find(params[:marble_id])
+  def comments_by_marble
+    @comment = Comment.order(:marble_id)
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_comment
@@ -71,4 +76,6 @@ class CommentsController < ApplicationController
     def comment_params
       params.require(:comment).permit(:user_id, :marble_id, :comment_text)
     end
+
+
 end

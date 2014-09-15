@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   
   root 'welcome#index'
 
+  get 'marbles/marbles_by_user'
+
   get 'welcome/index'
 
   get 'welcome/marble_grade'
@@ -10,12 +12,15 @@ Rails.application.routes.draw do
 
   get 'users/sign_out'
 
+  get 'comments/comments_by_marble'
+
   resources :comments
   resources :marbles
   devise_for :users
   devise_for :models
+ 
 
-  # The priority is based upon order of creation: first created -> highest priority.
+ # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
