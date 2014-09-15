@@ -9,4 +9,7 @@ class WelcomeController < ApplicationController
   def marble_history
   end
 
+  def user_profile
+  end
+
 end

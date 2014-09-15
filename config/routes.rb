@@ -3,6 +3,10 @@ Rails.application.routes.draw do
 
   get 'comments/comments_by_marble'
 
+  get 'welcome/user_profile'
+
+  get 'marbles/marbles_by_user'
+
   get 'welcome/index'
 
   get 'welcome/marble_grade'

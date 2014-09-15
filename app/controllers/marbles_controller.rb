@@ -63,7 +63,11 @@ class MarblesController < ApplicationController
   end
 
   def show_my_marbles
-    @marble = Marble.where(user_id: current_user.id)    
+    @marble = Marble.where(user_id: current_user.id)  
+  end
+
+  def marbles_by_user
+    @marble = Marble.all 
   end
 
   private
