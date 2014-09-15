@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   
   root 'welcome#index'
 
-  get 'marbles/marbles_by_user'
+  get 'marbles/marbles_by_user', as: :marbleuser
 
   get 'welcome/index'
 
@@ -12,7 +12,7 @@ Rails.application.routes.draw do
 
   get 'users/sign_out'
 
-  get 'comments/comments_by_marble'
+  get 'comments/comments_by_marble', as: :marblecomments
 
   resources :comments
   resources :marbles

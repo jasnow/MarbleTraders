@@ -1,27 +1,24 @@
 <h1>Marble Trading Floor</h1>
+<strong><%= link_to 'Add Your Marble Here', new_marble_path %><strong>
 
 <table class='table'>
-  <thead>
-    <tr>
-      <th>Trader</th>
-      <th></th>
-      <th>Marble name</th>
-      <th>Description</th>
-      <th colspan="3"></th>
-    </tr>
+  <thead> 
   </thead>
-
+<br><br>
   <tbody>
     <% @marble.each do |marble| %>
       <tr>
-        <div class="field">
-          <td><%= marble.user.user_name %></td>
+        <div class="field"> 
           <td><%= image_tag marble.avatar.url(:thumb) %></td>
-          <td><%= marble.marble_name %></td>
+          <td><%= link_to marble.user.user_name, marbleuser_path %></td>
+
           <td><%= marble.marble_text %></td>
-          <td><%= link_to 'Show', marble %></td>
-          <td><%= link_to 'Edit', edit_marble_path(marble) %></td>
-          <td><%= link_to 'Destroy', marble, method: :delete, data: { confirm: 'Are you sure?' } %></td>      
+
+    
+      </tr>
+      <tr>
+          <td><%= marble.marble_name %></td>
+          <td><%= link_to 'Comments', marblecomments_path%></td>
       </tr>
     <% end %>
   </tbody>
@@ -29,4 +26,8 @@
 
 <br>
 
-<strong><%= link_to 'Add Your Marble Here', new_marble_path %><strong>
+        <td><%#= link_to 'Show', marble %></td>
+          <td><%#= link_to 'Edit', edit_marble_path(marble) %></td>
+          <td><%#= link_to 'Destroy', marble, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
+
