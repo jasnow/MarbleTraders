@@ -1,5 +1,4 @@
-Rails.application.routes.draw do
-  
+Rails.application.routes.draw do 
   root 'welcome#index'
 
   get 'comments/comments_by_marble'
@@ -8,13 +7,18 @@ Rails.application.routes.draw do
 
   get 'welcome/marble_grade'
 
-  get 'marbles/show_my_marbles'
+  get 'marbles/show_my_marbles', as: :marbleuser
 
   get 'welcome/marble_history'
 
   get 'users/sign_out'
 
   get 'comments/comments_by_marble', as: :marblecomments
+
+  resources :comments
+  resources :marbles
+  devise_for :users
+  devise_for :models
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
