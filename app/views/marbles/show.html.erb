@@ -2,17 +2,13 @@
 
 <h2><%= @marble.marble_name %></h2>
 <br><br>
-  <%= image_tag @marble.avatar.url(:medium) %>
+  <%= image_tag @marble.avatar.url(:thumb) %>
 <p><br><br>
 <strong>User:</strong>
   <%= @marble.user.user_name %>
 </p>
 
-<p>
-  <strong>Marble Pic:</strong>
-  friend.avatar.url => http://marbletrader.s3.amazonaws.com/...
-  <%#= image_tag friend.avatar.url(:square) %>
-</p>
+ <!--marble.avatar.url => http://marbletrader.s3.amazonaws.com/... -->
 
 <p>
   <strong>Marble name:</strong>

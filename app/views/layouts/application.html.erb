@@ -24,14 +24,15 @@
     </div>
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li><a href="/users/edit">Edit Account</a></li>
         <li><a href="/marbles">Trading Floor</a></li> 
         <li><a href="/comments">Comments</a></li> 
         <li><a href="/welcome/marble_grade">Marble Grading</a></li> 
+
         <li><a href="/welcome/marble_history">Marble FAQ</a></li> 
         <li><a href="/marbles/marble_by_user">Marbles by User</a></li> 
         <li><a href="/comments/comments_by_marble">Comments by Marble</a></li> 
-        <li><a <%= link_to "Sign out",destroy_user_session_path, method: :delete, class: "button" %>></a></li> 
+        <li> <%= link_to "Sign out",destroy_user_session_path, method: :delete, class: "button" %></li> 
+
         </ul>
         </ul>
     </div>
