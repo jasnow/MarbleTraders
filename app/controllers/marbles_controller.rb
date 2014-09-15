@@ -62,18 +62,18 @@ class MarblesController < ApplicationController
     end
   end
 
-  def marbles_by_user
-    @marble = Marble.order(:user_id)    
+  def show_my_marbles
+    @marble = Marble.where(user_id: current_user.id)    
   end
 
   private
     # Use callbacks to share common setup or constraints between actions.
-    def set_marble
+  def set_marble
       @marble = Marble.find(params[:id])    
-    end
+  end
 
     # Never trust parameters from the scary internet, only allow the white list through.
-    def marble_params
+  def marble_params
       params.require(:marble).permit(:user_id, :marble_name, :marble_text, :name, :avatar)
-    end
+  end
 end

@@ -2,17 +2,17 @@ Rails.application.routes.draw do
   
   root 'welcome#index'
 
-  get 'marbles/marbles_by_user'
+  get 'comments/comments_by_marble'
 
   get 'welcome/index'
 
   get 'welcome/marble_grade'
 
+  get 'marbles/show_my_marbles'
+
   get 'welcome/marble_history'
 
   get 'users/sign_out'
-
-  get 'comments/comments_by_marble'
 
   resources :comments
   resources :marbles
