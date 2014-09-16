@@ -57,11 +57,11 @@
             <a href="#" class="dropdown-toggle,navbar-brand" data-toggle="dropdown">My Account<span class="caret"></span></a>
             <ul class="dropdown-menu" role="menu">
 
-             <li><a href="/welcome/user_profile">Edit My Profile</a></li>
+             <li><a href="/welcome/user_profile">Edit Profile</a></li>
 
-             <li><a href="/marbles/show_my_marbles">Show My Marbles</a></li> 
+             <li><a href="/marbles/show_my_marbles">Show Marbles</a></li> 
 
-             <li><%= link_to 'Add Your Marble Here', new_marble_path %></li> 
+             <li><%= link_to 'Add Marble ', new_marble_path %></li> 
              <li> <%= link_to "Sign out",destroy_user_session_path, method: :delete, class: "button" %></li> 
 
             
