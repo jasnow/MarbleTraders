@@ -16,15 +16,15 @@
     <%= f.collection_select :user_id, User.order(:user_name), :id, :user_name %>
   </div>
   <div class="field">
-    <%= f.label :marble_name %><br>
+    <%= f.label :name_your_marble %><br>
     <%= f.text_field :marble_name %>
   </div>
     <div class="field">
-    <%= f.label :avatar %>
+    <%= f.label :add_marble_pic %>
     <%= f.file_field :avatar %>
   </div>
   <div class="field">
-    <%= f.label :marble_text %><br>
+    <%= f.label :describe_your_marble %><br>
     <%= f.text_area :marble_text %>
   </div>
   <div class="actions">
