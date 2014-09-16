@@ -1,0 +1,23 @@
+<h1>Marbles by User</h1>
+<br>
+<table class="table">
+  <thead>
+    <tr>
+      <th>  </th>
+      <th> Marble Name(s)</th>
+      <th> User Description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+  <% @marble.each do |marble| %>
+      <tr>
+        <div class="field"> 
+          <td rowspan="2"><%= image_tag marble.avatar.url(:thumb) %></td>
+      </tr>
+      <tr>
+          <td><%= marble.marble_name %></td> 
+          <td><%= marble.marble_text %></td> 
+      </tr>
+    <% end %>
+  </tbody>
+</table>
