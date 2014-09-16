@@ -13,15 +13,6 @@
 
   <tbody>
 
-  	<% @marbles.each do |m| %>
-      <tr>
-      	<td><%= m.user.user_name %></td>
-        <td><%= m.marble.marble_name %></td>
-        <td><%= m.comment_text %></td>
-      </tr>
-      <% end %>
-
-
     <% @comments.each do |c| %>
       <tr>
         <td><%= c.user.user_name %></td>
