@@ -58,7 +58,8 @@
 
              <li><a href="/marbles/show_my_marbles">Show My Marbles</a></li> 
 
-             <li><a href="/welcome/marble_history">Add New Marbles</a></li> 
+             <li><%= link_to 'Add Your Marble Here', new_marble_path %></li> 
+
 
            </ul>
 
@@ -66,6 +67,7 @@
 
 
         <li> <%= link_to "Sign out",destroy_user_session_path, method: :delete, class: "button" %></li> 
+
 
        </ul>
      </div>
