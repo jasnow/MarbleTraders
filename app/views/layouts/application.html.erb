@@ -30,6 +30,7 @@
           <li class="dropdown">
             <a href="#" class="dropdown-toggle,lrg- navbar-brand" data-toggle="dropdown">Home<span class="caret"></span></a>
             <ul class="dropdown-menu" role="menu">
+
              <li><a href="/welcome/marble_grade">Marble Grading</a></li> 
 
              <li><a href="/welcome/marble_history">Marble FAQ</a></li> 
@@ -38,19 +39,21 @@
          </li>
 
          <li><a href="/marbles">Trading Floor</a></li> 
-         <li><a href="/comments">Comments</a></li> 
 
-
-
-
-
-
-
+        
          <li><a href="/marbles/marbles_by_user">Marbles by User</a></li> 
          <li><a href="/comments/comments_by_marble">Comments by Marble</a></li> 
-          <ul class="nav navbar-nav">
+       </ul>
+       <ul class="nav navbar-nav navbar-right">
 
+
+
+
+
+
+          
           <li class="dropdown">
+
             <a href="#" class="dropdown-toggle,navbar-brand" data-toggle="dropdown">My Account<span class="caret"></span></a>
             <ul class="dropdown-menu" role="menu">
 
@@ -59,15 +62,16 @@
              <li><a href="/marbles/show_my_marbles">Show My Marbles</a></li> 
 
              <li><%= link_to 'Add Your Marble Here', new_marble_path %></li> 
+             <li> <%= link_to "Sign out",destroy_user_session_path, method: :delete, class: "button" %></li> 
 
+            
 
            </ul>
 
 
 
 
-        <li> <%= link_to "Sign out",destroy_user_session_path, method: :delete, class: "button" %></li> 
-
+       
 
        </ul>
      </div>
