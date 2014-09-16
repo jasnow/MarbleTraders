@@ -33,6 +33,7 @@
           <td><%= marble.marble_name %></td> 
           <td><a id="displayText" href="javascript:toggle();">Show Comments</a>
           <div id="toggleText" style="display: none">Comments Here</div></td> 
+          <td>First Posted:&nbsp; &nbsp;<%= time_ago_in_words(marble.created_at) %>&nbsp; &nbsp;ago</td>
       </tr>
     <% end %>
   </tbody>
