@@ -4,22 +4,29 @@
 <table class="table">
   <thead>
     <tr>
-      <th>User</th>
-      <th> Marble</th>
-      <th> Comment text</th>
+      <th>User Name(s)</th>
+      <th> Marble Name(s)</th>
+      <th> Comment(s)</th>
       <th colspan="3"></th>
     </tr>
   </thead>
 
   <tbody>
-    <% @comments.each do |comment| %>
+
+  	<% @marbles.each do |m| %>
       <tr>
-        <td><%= comment.user.user_name %></td>
-        <td><%= comment.marble.marble_name %></td>
-        <td><%= comment.comment_text %></td>
-        <td><strong><%= link_to 'Show', comment %><strong></td> 
-        <td><strong><%= link_to 'Edit', edit_comment_path(comment) %><strong></td> 
-        <td><strong><%= link_to ' Destroy', comment, method: :delete, data: { confirm: 'Are you sure?' } %><strong></td>
+      	<td><%= m.user.user_name %></td>
+        <td><%= m.marble.marble_name %></td>
+        <td><%= m.comment_text %></td>
+      </tr>
+      <% end %>
+
+
+    <% @comments.each do |c| %>
+      <tr>
+        <td><%= c.user.user_name %></td>
+        <td><%= c.marble.marble_name %></td>
+        <td><%= c.comment_text %></td>
       </tr>
     <% end %>
   </tbody>
