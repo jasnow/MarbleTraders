@@ -10,6 +10,15 @@ class WelcomeController < ApplicationController
   end
 
   def user_profile
+  	 @comments = Comment.where(user_id: current_user.id)
+  	 # @user = User.where(user_id: current_user.id) 
+  	 # @marbles = Marble.where(user_id: current_user.id)
   end
+
+  
+
+
+
+
 
 end
