@@ -23,9 +23,18 @@ class Marble < ActiveRecord::Base
 
   validates_with AttachmentSizeValidator, :attributes => :avatar, :less_than => 10.megabytes
 
+  #scope order('updated_at desc')
+  scope :updated_at, -> {where(updated_at: desc)}
+
+  def self.descend
+    order('updated_at desc')
+  end
+
 end
 
- #friend.avatar.url => http://marbletrader.s3.amazonaws.com/
+
+  
+
 
     
   
