@@ -1,6 +1,6 @@
 <h2>Edit User Profile</h2>
 
-<strong><%= link_to "Back to User Profile", '/welcome/user_profile' %><strong> 
+<strong><%= link_to "Trading Profile", '/welcome/user_profile' %><strong> 
 <br><br>
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= devise_error_messages! %>

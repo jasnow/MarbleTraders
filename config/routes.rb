@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   get 'comments/comments_by_marble'
 
-  get 'welcome/user_profile'
+  get 'welcome/trader_profile'
 
   get 'marbles/marbles_by_user'
 
