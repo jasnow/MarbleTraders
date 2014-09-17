@@ -5,6 +5,8 @@ class MarblesController < ApplicationController
   # GET /marbles.json
   def index
     @marble = Marble.all
+    @descend_marble = @marble.descend
+
   end
 
   # GET /marbles/1
