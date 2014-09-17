@@ -15,11 +15,12 @@
         <tr>
         <td><%= c.marble.marble_name %></td>
         <td><%= c.comment_text %></td>
+        <td><strong><%= link_to 'New Comment', new_comment_path %><strong></td>
         </tr>
     <% end %>
   </tbody>
 </table>
 <br>
 
-<strong><%= link_to 'New Comment', new_comment_path %><strong>
+
 
