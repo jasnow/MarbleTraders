@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 
   get 'welcome/trader_profile'
 
-  get 'marbles/marbles_by_user'
+  get 'marbles/marbles_by_user', as: :othersmarbles
 
   get 'welcome/index'
 
