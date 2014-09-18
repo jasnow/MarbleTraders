@@ -25,15 +25,15 @@
         <div class="field"> 
 
           <td rowspan="2"><%= image_tag marble.avatar.url(:thumb) %></td>
-          <td><%= link_to marble.user.user_name, othersmarbles_path(marble.user_id)  %></td>
+          <td><%= link_to marble.user.user_name, othersmarbles_path(marble.user_id) %></td>
           <td><%= marble.marble_text %></td>
 
       </tr>
       <tr>
           <td><%= marble.marble_name %></td> 
-          <td><a id="displayText" href="javascript:toggle();">Show Comments</a>
-          <div id="toggleText" style="display: none">Comments Here</div></td> 
-          <td>Updated:&nbsp; &nbsp;<%= time_ago_in_words(marble.created_at) %>&nbsp; &nbsp;ago</td>
+          <td><h6><%= link_to 'Add Comment', new_comment_path %></h6></td>
+          <td><h6><%= link_to 'See Comments', comments_path %></h6></td>
+          <td><h6>Added:&nbsp; &nbsp;<%= time_ago_in_words(marble.created_at) %>&nbsp; &nbsp;ago</h6></td>
       </tr>
     <% end %>
   </tbody>
@@ -45,9 +45,12 @@
         <td><%#= c.marble.marble_name %></td>
         <td><%#= c.comment_text %></td>
         </tr>
-    <%# end %>  -->
+    <%# end %>  
 
         <td><%#= link_to 'Comments', marblecomments_path%></td>
+
+                  <td><a id="displayText" href="javascript:toggle();">See Comments</a>
+          <div id="toggleText" style="display: none">We wish!!</div></td>  -->
 
 
 
