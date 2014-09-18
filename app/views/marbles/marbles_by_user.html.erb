@@ -1,4 +1,4 @@
-<h1>Marbles by User</h1>
+<h1>Marbles by <%= @user %></h1>
 
 <br>
 <table class="table">
@@ -10,7 +10,7 @@
       <th colspan="3"></th>
     </tr>
   </thead>
-  <% @marble.each do |marble| %>
+  <% @marb.each do |marble| %>
       <tr>
         <div class="field"> 
           <td rowspan="2"><%= image_tag marble.avatar.url(:thumb) %></td>

@@ -25,7 +25,7 @@
         <div class="field"> 
 
           <td rowspan="2"><%= image_tag marble.avatar.url(:thumb) %></td>
-          <td><%= link_to marble.user.user_name, othersmarbles_path(marble.user_id) %></td>
+          <td><%= link_to marble.user.user_name, othersmarbles_path(:id => marble.user.id) %></td>
           <td><%= marble.marble_text %></td>
 
       </tr>
