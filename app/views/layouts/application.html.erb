@@ -23,25 +23,27 @@
       </div> 
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
-          <li class="dropdown"></li>
-          <a href="#" class="dropdown-toggle,lrg- navbar-brand" data-toggle="dropdown">Home<span class="caret"></span></a>
-          <ul class="dropdown-menu" role="menu">
-            <li><a href="/welcome/marble_grade">Marble Grading</a></li> 
-            <li><a href="/welcome/marble_history">Marble FAQ</a></li> 
-          </ul>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle,lrg- navbar-brand" data-toggle="dropdown">Home<span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="/welcome/marble_grade">Marble Grading</a></li> 
+              <li><a href="/welcome/marble_history">Marble FAQ</a></li>  
+            </ul>          
+          </li> 
           <li><a href="/marbles">Trading Floor</a></li>     
           <li><a href="/marbles/marbles_by_user">Marbles by User</a></li> 
           <li><a href="/comments/comments_by_marble">Comments by Marble</a></li> 
         </ul>
         <ul class="nav navbar-nav navbar-right">           
-          <li class="dropdown"></li>
+          <li class="dropdown">
             <a href="#" class="dropdown-toggle,navbar-brand" data-toggle="dropdown">My Account<span class="caret"></span></a>
             <ul class="dropdown-menu" role="menu">
               <li><%= link_to "Edit User Profile",edit_user_registration_path %></li>
               <li><%= link_to "Trading Profile", '/welcome/trader_profile' %></li>
               <li><%= link_to 'Add Marble ', new_marble_path %></li> 
               <li> <%= link_to "Sign out",destroy_user_session_path, method: :delete, class: "button" %></li>   
-            </ul>         
+            </ul> 
+          </li>          
         </ul>
        </div>
      </div>
