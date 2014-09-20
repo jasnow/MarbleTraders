@@ -13,7 +13,8 @@ class WelcomeController < ApplicationController
 
   def trader_profile 
 
-  	 @marble = Marble.where(user_id: current_user.id)
+  	 @marb = Marble.where(user_id: current_user.id)
+     @marble = @marb.reverse_order
   	 @comments = Comment.where(user_id: current_user.id) 
   end
 
