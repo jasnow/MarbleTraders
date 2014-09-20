@@ -11,10 +11,7 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :user_id %><br> 
-    <%= f.collection_select :user_id, User.order(:user_name), :id, :user_name %>
-  </div>
+  
   <div class="field">
     <%= f.label :name_your_marble %><br>
     <%= f.text_field :marble_name %>
@@ -31,3 +28,8 @@
       <%= f.submit %>
   </div>
 <% end %>
+
+<div class="field">
+    <%#= f.label :current_user_id %><br> 
+    <%#= f.collection_select :user_id, User.order(:user_name), :id, :user_name %>
+  </div>

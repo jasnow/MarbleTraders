@@ -16,8 +16,8 @@
         <td><%= comment.user.user_name %></td>
         <td><%= comment.marble.marble_name %></td>
         <td><%= comment.comment_text %></td> 
-        <td><strong><%= link_to 'Re-Roll', edit_comment_path(comment) %><strong></td> 
-        <td><strong><%= link_to 'Roll Away', comment, method: :delete, data: { confirm: 'Are you sure?' } %><strong></td>
+        <td><strong><%= link_to 'Edit', edit_comment_path(comment) %><strong></td> 
+        <td><strong><%= link_to 'Delete', comment, method: :delete, data: { confirm: 'Are you sure?' } %><strong></td>
       </tr>
     <% end %>
   </tbody>

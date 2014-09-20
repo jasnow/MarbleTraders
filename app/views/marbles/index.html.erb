@@ -31,6 +31,7 @@
       </tr>
       <tr>
           <td><%= marble.marble_name %></td> 
+          <td><%= marble.id %></td>
           <td><h6><%= link_to 'Add Comment', new_comment_path %></h6></td>
           <td><h6><%= link_to 'See Comments', comments_path %></h6></td>
           <td><h6>Added:&nbsp; &nbsp;<%= time_ago_in_words(marble.created_at) %>&nbsp; &nbsp;ago</h6></td>
