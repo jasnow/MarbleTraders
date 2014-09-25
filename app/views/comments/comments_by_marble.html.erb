@@ -12,16 +12,15 @@
 
   <tbody>
     <% @comment.each do |c| %>
-        <tr>
+      <tr>
         <td><%= c.marble.marble_name %></td>
-        <td><%= c.comment_text %></td>
-        
-        </tr>
+        <td><%= c.comment_text %></td>     
+      </tr>
     <% end %>
   </tbody>
 </table>
 <td><strong><%= link_to 'New Comment', new_comment_path %><strong></td>
-<br>
+
 
 
 

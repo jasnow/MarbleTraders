@@ -6,7 +6,8 @@ class MarblesController < ApplicationController
   def index
     @marble = Marble.all
     @descend_marble = @marble.descend
-
+    #@comment = Comment.find(params[:marble_id].comments)  WAS WORKING, used to show comments on Trading Floor
+    #@descend_comment = @comment.descend
   end
 
   # GET /marbles/1
@@ -85,4 +86,5 @@ class MarblesController < ApplicationController
   def marble_params
       params.require(:marble).permit(:user_id, :marble_name, :marble_text, :name, :avatar)
   end
+  
 end

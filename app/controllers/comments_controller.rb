@@ -24,8 +24,10 @@ class CommentsController < ApplicationController
   # POST /comments
   # POST /comments.json
   def create
+    #validates :comment_text, length: { maximum: 140 }  NOT WORKING!
     @comment = Comment.new(comment_params)
     @comment.user_id = current_user.id
+    @comment.marble_id = 1                      #this needs to be fixed!!
 
     respond_to do |format|
       if @comment.save
@@ -77,6 +79,5 @@ class CommentsController < ApplicationController
     def comment_params
       params.require(:comment).permit(:user_id, :marble_id, :comment_text)
     end
-
-
+    
 end

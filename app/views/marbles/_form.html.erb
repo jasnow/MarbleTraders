@@ -4,9 +4,9 @@
       <h2><%= pluralize(@marble.errors.count, "error") %> prohibited this marble from being saved:</h2>
 
       <ul>
-      <% @marble.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
+        <% @marble.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
       </ul>
     </div>
   <% end %>
@@ -16,7 +16,7 @@
     <%= f.label :name_your_marble %><br>
     <%= f.text_field :marble_name %>
   </div>
-    <div class="field">
+  <div class="field">
     <%= f.label :add_marble_pic %>
     <%= f.file_field :avatar %>
   </div>

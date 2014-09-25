@@ -1,57 +1,48 @@
-<h1>Marble Trading Floor</h1>
-<strong><%= link_to 'Add Your Marble Here', new_marble_path %><strong>
+<html>
+  <head>
+    <title>Trading Floor |<%= full_title(yield(:title)) %></title>
 
-<table class='table'>
-  <thead> 
-    <script language="javascript"> 
-      function toggle() {
-      var ele = document.getElementById("toggleText");
-      var text = document.getElementById("displayText");
-      if(ele.style.display == "block") {
-        ele.style.display = "none";
-        text.innerHTML = "Show Comments";
-        }
-      else {
-        ele.style.display = "block";
-        text.innerHTML = "Hide Comments";
-        }
-      } 
-    </script>
-  </thead>
-<br><br>
-  <tbody>
-    <% @descend_marble.each do |marble| %>
-      <tr>
-        <div class="field"> 
+    <h1>Marble Trading Floor</h1>
+    <strong><%= link_to 'Add Your Marble Here', new_marble_path %><strong>
 
-          <td rowspan="2"><%= image_tag marble.avatar.url(:thumb) %></td>
-          <td><%= link_to marble.user.user_name, othersmarbles_path(:id => marble.user.id) %></td>
-          <td><%= marble.marble_text %></td>
+        <script language="javascript"> 
+          function toggle() {
+          var ele = document.getElementById("toggleText");
+          var text = document.getElementById("displayText");
+          if(ele.style.display == "block") {
+            ele.style.display = "none";
+            text.innerHTML = "Show Comments";
+            }
+          else {
+            ele.style.display = "block";
+            text.innerHTML = "Hide Comments";
+            }
+          } 
+        </script>
+  </head>
+  <br><br>
+  <body>
+      <% @descend_marble.each do |marble| %> 
+          <div class="container"> 
+            <%= image_tag marble.avatar.url(:thumb) %>
+            <%= link_to marble.user.user_name, othersmarbles_path(:id => marble.user.id) %>
+            <%= marble.marble_text %>
+          </div>
+          <div class="container">
+            <%= marble.marble_name %>
+            <h6>Added:&nbsp; &nbsp;<%= time_ago_in_words(marble.created_at) %>&nbsp; &nbsp;ago</h6>
+            <h6><%= link_to 'Add Comment (not working)', new_comment_path(:id => marble.id) %></h6>
+            <h6>See Comments (also not working!)</h6>
+          </div>
+          <br>
+            <h6><%#= link_to 'See Comments', comments_path(:id => marble.id) %></h6>
+            <%#@descend_comment.each do |comment, marble|%>
+            <%#= comment.comment_text %>
+          <%#end%>
+      <% end %>
+  </body>
+</html>
 
-      </tr>
-      <tr>
-          <td><%= marble.marble_name %></td> 
-          <td><%= marble.id %></td>
-          <td><h6><%= link_to 'Add Comment', new_comment_path %></h6></td>
-          <td><h6><%= link_to 'See Comments', comments_path %></h6></td>
-          <td><h6>Added:&nbsp; &nbsp;<%= time_ago_in_words(marble.created_at) %>&nbsp; &nbsp;ago</h6></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-   <!--     <%# @comment.each do |c| %>
-        <tr>
-        <td><%#= c.marble.marble_name %></td>
-        <td><%#= c.comment_text %></td>
-        </tr>
-    <%# end %>  
-
-        <td><%#= link_to 'Comments', marblecomments_path%></td>
-
-                  <td><a id="displayText" href="javascript:toggle();">See Comments</a>
-          <div id="toggleText" style="display: none">We wish!!</div></td>  -->
 
 
 

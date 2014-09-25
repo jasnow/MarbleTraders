@@ -6,20 +6,21 @@
     <tr>
       <th>  </th>
       <th> Marble Name(s)</th>
-      <th> User Description</th>
+      <th> Description</th>
       <th colspan="3"></th>
     </tr>
   </thead>
-  <% @marb.each do |marble| %>
+  <body>
+    <% @marb.each do |marble| %>
       <tr>
         <div class="field"> 
           <td rowspan="2"><%= image_tag marble.avatar.url(:thumb) %></td>
       </tr>
       <tr>
-          <td><%= marble.marble_name %></td> 
-          <td><%= marble.marble_text %></td> 
-          
-          <td><strong><%= link_to 'Edit Marble', edit_marble_path(marble) %><strong></td> 
+        <td><%= marble.marble_name %></td> 
+        <td><%= marble.marble_text %></td> 
+        <br>
+        <td><strong><%= link_to 'Edit Marble', edit_marble_path(marble) %><strong></td> 
       </tr>
     <% end %>
   </tbody>
