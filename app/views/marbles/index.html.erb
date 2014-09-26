@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
   <head>
     <title>Trading Floor |<%= full_title(yield(:title)) %></title>
@@ -20,7 +21,7 @@
           } 
         </script>
   </head>
-  <br><br>
+  <br><br><hr style="width:65%;height:1px;background-color:#2A52BE;border:none" align='center' noshade='noshade'>
   <body>
       <% @descend_marble.each do |marble| %> 
           <div class="container"> 
@@ -30,15 +31,14 @@
           </div>
           <div class="container">
             <%= marble.marble_name %>
-            <h6>Added:&nbsp; &nbsp;<%= time_ago_in_words(marble.created_at) %>&nbsp; &nbsp;ago</h6>
-            <h6><%= link_to 'Add Comment (not working)', new_comment_path(:id => marble.id) %></h6>
-            <h6>See Comments (also not working!)</h6>
-          </div>
-          <br>
-            <h6><%#= link_to 'See Comments', comments_path(:id => marble.id) %></h6>
+            <span style="font-family: 'Verdana','sans-serif';">Added:&nbsp; &nbsp;<%= time_ago_in_words(marble.created_at) %>&nbsp; &nbsp;ago
+            <%= link_to 'Add Comment (partially working)', new_comment_path(:id => marble.id) %>
+            See Comments (also not working!) <%=marble.id%> </span> <!-- marble.id is just for testing. -->
             <%#@descend_comment.each do |comment, marble|%>
-            <%#= comment.comment_text %>
-          <%#end%>
+              <%#= comment.comment_text %>
+            <%#end%>
+          </div>
+          <br><hr style="width:65%;height:1px;background-color:#2A52BE;border:none" align='center' noshade='noshade'>
       <% end %>
   </body>
 </html>

@@ -12,4 +12,9 @@
  *
  *= require_tree .
  *= require_self
- */
+
+#blue{
+  color:blue;
+  font-family:verdana;
+  text-indent:45px;
+  } */

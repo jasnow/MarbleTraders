@@ -73,6 +73,7 @@ class MarblesController < ApplicationController
   def marbles_by_user
     @marble = Marble.all
     @marb = User.find(params[:id]).marbles
+    @descend_marb = @marb.descend
     @user = User.find(params[:id]).user_name
   end
 
