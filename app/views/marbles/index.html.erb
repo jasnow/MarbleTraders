@@ -26,14 +26,14 @@
       <% @descend_marble.each do |marble| %> 
           <div class="container"> 
             <%= image_tag marble.avatar.url(:thumb) %>
-            <%= link_to marble.user.user_name, othersmarbles_path(:id => marble.user.id) %>
+            <span style="padding: 25px"><%= link_to marble.user.user_name, othersmarbles_path(:id => marble.user.id) %></span>
             <%= marble.marble_text %>
           </div>
           <div class="container">
-            <%= marble.marble_name %>
-            <span style="font-family: 'Verdana','sans-serif';">Added:&nbsp; &nbsp;<%= time_ago_in_words(marble.created_at) %>&nbsp; &nbsp;ago
-            <%= link_to 'Add Comment (partially working)', new_comment_path(:id => marble.id) %>
-            See Comments (also not working!) <%=marble.id%> </span> <!-- marble.id is just for testing. -->
+            <span style="padding: 10px"><%= marble.marble_name %></span>
+            <span style="font-family:Verdana,sans-serif; color:blue; font-size:10px"><span style="padding: 55px">Added:&nbsp; &nbsp;<%= time_ago_in_words(marble.created_at) %>&nbsp; &nbsp;ago</span>
+            <span style="padding: 15px"><%= link_to 'Add Comment (partially working)', new_comment_path(:id => marble.id) %></span>
+            <span style="padding: 15px">See Comments (also not working!)</span> <%#=marble.id%></span> <!-- marble.id is just for testing. -->
             <%#@descend_comment.each do |comment, marble|%>
               <%#= comment.comment_text %>
             <%#end%>
@@ -41,6 +41,8 @@
           <br><hr style="width:65%;height:1px;background-color:#2A52BE;border:none" align='center' noshade='noshade'>
       <% end %>
   </body>
+  <br>
+  <br>
 </html>
 
 
