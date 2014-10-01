@@ -1,22 +1,43 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+h1 {
+    text-shadow: 2px 2px #888888;
+}
+</style>
+</head>
+<body>
 <h1>Welcome to MarbleTraders</h1>
+
+<div class="col-md-9">
 
 <blockquote><i>"He who dies with the most marbles, wins!"</i></blockquote>
 
-<P>Welcome to MarbleTraders -the world's first (and by definition the BEST)- web platform for trading marbles</p>
+<P><b>Welcome to MarbleTraders -the world's first (and by definition the BEST)- web platform for trading marbles</b></p><br>
 
-<p>Be the first to sign up and build the best marble collection on your block!</p>
+<p><b><%= link_to 'Sign up now ', new_user_registration_path %></b> and build the best marble collection on your block!</p>
 
-<p>View and trade some of the best-looking marbles on the Planet!</p>
+<div class="img">
+<p>View and trade some of the best-looking marbles on the Planet!
+<img src="https://fbcdn-sphotos-g-a.akamaihd.net/hphotos-ak-xpa1/v/t1.0-9/10177928_644348968969169_3378947343961334397_n.png?oh=2449d4429ce64534cc66fa1d64d626a6&oe=54CD82F7&__gda__=1422686031_772a5813c0044761672c6f71145313f4" width="80" height="80"></p>
+</div>
 
-<p>See some of the world's most unique marbles!</p>
+<div class="img">
+<p>See some of the world's most unique marbles!<img src="http://www.marblecollecting.com/s/cc_images/cache_2756627904.png?t=1334446498" width="80" height="80"></p>
+</div>
 
-<p> Trade with your friends!  Trade with people around the world!</p>
+<div class="img">
+<p> Trade with your friends!  Trade with people around the world!<img src="http://www.marblecollecting.com/s/cc_images/cache_3478261004.jpg?t=1347887566"></p><br>
+</div>
 
+</div>
 
-
-
-
-
+ 
+<div class="col-md-3">
+<br><br>
 
 <h2>Log in</h2>
 
@@ -36,3 +57,6 @@
 <br>
 <%= render "devise/shared/links" %>
 
+</div>
+</body>
+</html>
