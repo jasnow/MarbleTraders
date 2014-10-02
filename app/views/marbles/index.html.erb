@@ -33,10 +33,11 @@
             <span style="padding: 10px"><%= marble.marble_name %></span>
             <span style="font-family:Verdana,sans-serif; color:blue; font-size:10px"><span style="padding: 55px">Added:&nbsp; &nbsp;<%= time_ago_in_words(marble.created_at) %>&nbsp; &nbsp;ago</span>
             <span style="padding: 15px"><%= link_to 'Add Comment (partially working)', new_comment_path(:id => marble.id) %></span>
-            <span style="padding: 15px">See Comments (also not working!)</span> <%#=marble.id%></span> <!-- marble.id is just for testing. -->
-            <%#@descend_comment.each do |comment, marble|%>
-              <%#= comment.comment_text %>
-            <%#end%>
+            <span style="padding: 15px">See Comments (partially working)</span><br><br>
+            <%@descend_comment.each do |comment|%>
+              <span style="color:black; padding: 100px"><%= comment.user.user_name%>:<span style="padding: 25px"><%= comment.comment_text %>
+              </span></span><br>
+            <%end%>
           </div>
           <br><hr style="width:65%;height:1px;background-color:#2A52BE;border:none" align='center' noshade='noshade'>
       <% end %>

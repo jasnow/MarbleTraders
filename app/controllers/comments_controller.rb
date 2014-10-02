@@ -27,7 +27,7 @@ class CommentsController < ApplicationController
     #validates :comment_text, length: { maximum: 140 }  NOT WORKING!
     @comment = Comment.new(comment_params)
     @comment.user_id = current_user.id
-    @comment.marble_id = 1                      #this needs to be fixed!!
+    #@comment.marble_id = Marble.find(params[:id])     #this needs to be fixed!!
 
     respond_to do |format|
       if @comment.save

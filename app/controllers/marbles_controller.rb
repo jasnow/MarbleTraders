@@ -6,8 +6,8 @@ class MarblesController < ApplicationController
   def index
     @marble = Marble.all
     @descend_marble = @marble.descend
-    #@comment = Comment.find(params[:marble_id].comments)  WAS WORKING, used to show comments on Trading Floor
-    #@descend_comment = @comment.descend
+    @comment = Comment.all   #find(params[:marble_id].comments)  Same basic problem as with Add Comment: passing id.
+    @descend_comment = @comment.descend
   end
 
   # GET /marbles/1
