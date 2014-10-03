@@ -1,4 +1,7 @@
 == README
+This application is covered by the MIT license.
+
+
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
